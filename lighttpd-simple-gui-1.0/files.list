@@ -1,0 +1,13 @@
+/etc/skel/Desktop/lighttpd-simple-gui.desktop
+/opt/samp-sis/icons/lighttpd.png
+/opt/samp-sis/icons/lighttpd_dock_icon.png
+/opt/samp-sis/libs/libsamp-array.sh
+/opt/samp-sis/libs/libsamp-forms.sh
+/opt/samp-sis/libs/libsamp-keyboard.sh
+/opt/samp-sis/libs/libsamp-menu.sh
+/opt/samp-sis/lighttpd-simple-gui
+/opt/samp-sis/lighttpd-simple-gui-functions
+/opt/samp-sis/lighttpd-simple-gui.conf
+/opt/samp-sis/lighttpd-simple-gui.list
+/usr/bin/lighttpd-simple-gui
+/usr/share/applications/lighttpd-simple-gui.desktop

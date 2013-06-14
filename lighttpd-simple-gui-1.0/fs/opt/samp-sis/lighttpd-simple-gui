@@ -1,0 +1,69 @@
+#!/bin/sh
+#
+# lighttpd-simple-gui lighttpd gui cmdline interface
+#
+# Copyright (C) 2013 Elvin Rodas - elvinrodas@outlook.com
+#
+VERSION=1.0
+
+#include library
+. /opt/samp-sis/libs/libsamp-forms.sh
+. /opt/samp-sis/libs/libsamp-menu.sh
+
+# config file
+. /opt/samp-sis/lighttpd-simple-gui.conf
+the_menu_file='/opt/samp-sis/lighttpd-simple-gui.list'
+
+# functions file
+. /opt/samp-sis/lighttpd-simple-gui-functions
+
+#
+# Commands
+#
+
+NAME="lighttpd-simple-gui"
+DESC="lighttpd shell gui."
+
+the_title="LightTPD Web Server GUI"
+the_description='Option    Description'
+the_footer="Select one option to execute."
+
+last_index "file" "$the_menu_file"
+limit=$?
+
+
+tmp_file="/tmp/lighttpd-simple-gui-tmp.txt"
+r_answer="0"
+kb_key="up"
+selected=0
+stty -echo # hide input char
+while [ $r_answer != "1" ]
+do
+
+  clear > $tmp_file
+  form_header "$the_title" "$the_description" >> $tmp_file
+  menu_read $the_menu_file $selected >> $tmp_file
+  form_footer "$the_footer" >> $tmp_file
+  newline >> $tmp_file
+  cat $tmp_file
+
+  kb_key=$(keyboard_key)
+  menu_reselect $kb_key $selected $limit
+  selected=$?
+
+  if [ $kb_key == "enter" ]; then
+    do_action $selected
+    newline
+    form_label "Press a key to continue..."
+    kb_key=$(keyboard_key)
+    menu_reselect $kb_key $selected $limit
+    selected=$?
+  fi
+
+done
+
+stty echo
+rm $tmp_file
+form_exit_msg
+
+exit 0

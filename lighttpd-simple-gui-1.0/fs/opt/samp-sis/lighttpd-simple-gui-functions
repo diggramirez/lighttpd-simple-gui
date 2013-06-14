@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# lighttpd-simple-gui lighttpd gui cmdline interface
+#
+# Copyright (C) 2013 Elvin Rodas - elvinrodas@outlook.com
+#
+VERSION=1.0
+
+do_action() {
+  sel_item=$1
+
+  case $sel_item in
+  0|1|2)
+    case $sel_item in
+      0) action="start" ;;
+      1) action="stop" ;;
+      2) action="restart" ;;
+     esac
+     /etc/init.d/lighttpd $action
+     ;;
+  3)
+    su - $LOGNAME -c "tazweb "$url_server_status"" ;;
+  4)
+    su - $LOGNAME -c "browser "$url_server"" ;;
+  5)
+    su - $LOGNAME -c "file-manager "$document_root"/" ;;
+  6)
+    su - $LOGNAME -c "browser "$url_server/$database_manager"/" ;;
+  7)
+    su - $LOGNAME -c "tazweb "$url_server/phpinfo"/" ;;
+  8)
+    editor /etc/lighttpd/lighttpd.conf ;;
+  9)
+    editor /etc/lighttpd/vhosts.conf ;;
+  10)
+    break ;;
+  esac
+}
+

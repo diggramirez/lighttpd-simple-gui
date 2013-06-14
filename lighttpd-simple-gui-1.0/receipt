@@ -1,0 +1,31 @@
+# SliTaz package receipt.
+
+PACKED_SIZE="8.5K"
+UNPACKED_SIZE="40.5K"
+PACKAGE="lighttpd-simple-gui"
+VERSION="1.0"
+CATEGORY="system"
+SHORT_DESC="LightTPD Web Server simple user interface."
+MAINTAINER="elvinrodas@outlook.com"
+TARBALL="$PACKAGE-$VERSION.tar.gz"
+TAGS="installer setup"
+WEB_SITE="http://elvinrodas.comoj.com/projects/pkg/$PACKAGE/"
+WGET_URL="http://elvinrodas.comoj.com/projects/pkg/$TARBAll"
+
+DEPENDS=""
+BUILD_DEPENDS=""
+
+# Rules to configure and make the package.
+compile_rules()
+{
+	cd $src
+	./configure --prefix=/usr \
+		$CONFIGURE_ARGS &&
+	make $MAKEFLAGS && make DESTDIR=$PWD/_pkg install
+}
+
+# Rules to gen a SliTaz package suitable for Tazpkg.
+genpkg_rules()
+{
+	cp -a $install/* $fs
+}

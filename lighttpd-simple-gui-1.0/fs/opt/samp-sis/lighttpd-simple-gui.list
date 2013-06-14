@@ -1,0 +1,11 @@
+Start the server
+Stop the server
+Restart the server
+Show server status
+Navigate Web Site
+Browse root folder (ex /var/www)
+Open database manager
+Show phpinfo
+Edit configuration file
+Edit vhost file
+Quit

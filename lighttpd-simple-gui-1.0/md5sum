@@ -1,0 +1,13 @@
+f5eeea90560355a975f03cfbbc2af8b1  /etc/skel/Desktop/lighttpd-simple-gui.desktop
+db1cb2b7511a560f1009cc5246e181f4  /opt/samp-sis/icons/lighttpd.png
+34efb80b97e8f6d9330eaac4c4c975e8  /opt/samp-sis/icons/lighttpd_dock_icon.png
+c50a60e8f1f77541d2e2a3c7e60e50a1  /opt/samp-sis/libs/libsamp-array.sh
+3a1e2560a99c66ccd3906bb09d8084eb  /opt/samp-sis/libs/libsamp-forms.sh
+eee8ab51f57a41d318c459586840b050  /opt/samp-sis/libs/libsamp-keyboard.sh
+f73c184dda666fc97b2eda24135b62a1  /opt/samp-sis/libs/libsamp-menu.sh
+38c0cbded5e258ca1cc22b7c5f06af1d  /opt/samp-sis/lighttpd-simple-gui
+2d2f55f4805be67e4222a1631cef8807  /opt/samp-sis/lighttpd-simple-gui-functions
+d0443100019a4127aba054b93d53ece8  /opt/samp-sis/lighttpd-simple-gui.conf
+340b3a3635bde0bedb7188b46c9fa326  /opt/samp-sis/lighttpd-simple-gui.list
+b22ba0c5592bbd6e8a0d70f37440263e  /usr/bin/lighttpd-simple-gui
+f5eeea90560355a975f03cfbbc2af8b1  /usr/share/applications/lighttpd-simple-gui.desktop

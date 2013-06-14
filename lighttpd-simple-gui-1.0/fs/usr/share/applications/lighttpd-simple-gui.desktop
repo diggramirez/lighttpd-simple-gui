@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=LightTPD server
+Exec=tazbox su sakura -t LightTPD-Server-GUI -he lighttpd-simple-gui
+Icon=/opt/samp-sis/icons/lighttpd_dock_icon.png
+Categories=System;Network;
